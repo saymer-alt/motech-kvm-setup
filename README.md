@@ -44,9 +44,27 @@ virt-manager
 - [docs/networking.md](docs/networking.md) — мост, отдельный IP и риски.
 - [docs/polkit.md](docs/polkit.md) — доменные пользователи, группа `libvirt`, права.
 - [docs/windows-guest.md](docs/windows-guest.md) — Windows, VirtIO, SPICE, WinFsp, LiteManager и официальные источники.
-- [windows/autounattend.example.xml](windows/autounattend.example.xml) — обезличенный XML-пример (не полноценная unattended установка).
+- [windows/autounattend.xml](windows/autounattend.xml) — исходная структура автоустановки Windows с заглушками вместо учётных данных.
+- [windows/autounattend.example.xml](windows/autounattend.example.xml) — минимальный пример без учётных данных.
 - [windows/virtio-fs-y-drive.reg](windows/virtio-fs-y-drive.reg) — параметр диска `Y:` для Virtio-FS.
 - [docs/security.md](docs/security.md) — аудит рисков, требования к публикации и тестам.
+
+## Официальные ресурсы и гостевые компоненты
+
+Сторонние программы не распространяются в составе репозитория. Перед установкой проверяйте подлинность файлов и совместимость версий.
+
+| Компонент | Для чего нужен | Официальный источник |
+|---|---|---|
+| QEMU | Виртуализация и виртуальное оборудование | [qemu.org](https://www.qemu.org/) |
+| libvirt | Управление виртуальными машинами | [libvirt.org](https://libvirt.org/) |
+| virt-manager | Графический менеджер виртуальных машин | [virt-manager.org](https://virt-manager.org/) |
+| VirtIO Windows Drivers | Сетевые, дисковые и другие драйверы Windows VM | [Fedora virtio-win downloads](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/) |
+| SPICE Guest Tools | Интеграция графической консоли Windows | [SPICE Project — downloads](https://www.spice-space.org/download.html) |
+| WinFsp | Зависимость некоторых сценариев Virtio-FS в Windows | [WinFsp Releases](https://github.com/winfsp/winfsp/releases) |
+| LiteManager | Удалённое администрирование гостевой Windows | [litemanager.ru](https://www.litemanager.ru/) |
+| Windows 10 ISO | Установка гостевой операционной системы | [Microsoft — Windows 10](https://www.microsoft.com/software-download/windows10) |
+
+Версии `virtio-win`, SPICE, WinFsp и средства установки Windows нужно подбирать по совместимости и требованиям организации. Это ссылки на ресурсы, а не обещание, что любой последний выпуск совместим с текущей VM. Подробнее — [документация гостевой Windows](docs/windows-guest.md).
 
 ## Критически важно
 1. Старый `autounattend.xml` содержал действующий на момент создания открытый пароль. Исходный XML **не загружен** в GitHub; заменить пароль на системах, где он использовался.
