@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ПУБЛИЧНЫЙ ПРИМЕР. Не содержит паролей и автоматически создаваемых аккаунтов.
+     Для рабочего unattended необходимо отдельно определить права доступа, выпуск ISO,
+     индекс нужного образа и секреты — НЕ хранить их в GitHub. -->
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+  <settings pass="windowsPE">
+    <component name="Microsoft-Windows-International-Core-WinPE"
+               processorArchitecture="amd64"
+               publicKeyToken="31bf3856ad364e35"
+               language="neutral"
+               versionScope="nonSxS">
+      <SetupUILanguage><UILanguage>ru-RU</UILanguage></SetupUILanguage>
+      <InputLocale>ru-RU;en-US</InputLocale>
+      <SystemLocale>ru-RU</SystemLocale>
+      <UILanguage>ru-RU</UILanguage>
+      <UserLocale>ru-RU</UserLocale>
+    </component>
+  </settings>
+</unattend>
