@@ -1,0 +1,63 @@
+# Temporary and editor files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+tmp/
+temp/
+
+# Virtual disks, machine state, and installation images
+*.qcow
+*.qcow2
+*.qed
+*.vdi
+*.vhd
+*.vhdx
+*.vmdk
+*.raw
+*.iso
+*.img
+*.sav
+*.vmem
+*.nvram
+
+# Backups and logs
+*.bak
+*.backup
+*.old
+*.orig
+*.log
+backups/
+logs/
+
+# Local configuration and secrets (publish sanitized templates only)
+.env
+.env.*
+!.env.example
+*.local
+*.local.*
+local/
+secrets/
+credentials/
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+autounattend.xml
+unattend.xml
+
+# Third-party installers and archives
+*.exe
+*.msi
+*.msix
+*.cab
+*.zip
+*.7z
+*.rar
